@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Notification Message </title>
+    </h:head>
+    <style>
+body
+{
+margin: 0;
+font-family: Arial, Helvetica, sans-serif;
+background: #e6ecf0;
+}
+h2
+{
+margin: auto;
+width: 50%;
+text-align: center;
+padding: 10px;
+}
+.re
+{
+    margin: auto;
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+}
+
+        
+    </style>   
+    <h:body>
+        <h:form id="formID">
+        
+        <h2>The message is </h2>
+        
+        <h3>#{login.userAccount.msgMethod()}</h3>
+        <div class="re"> 
+        <p>What is your options?</p>
+         
+        <p>
+        <h:inputText id="write" required ="false" title="Please enter your reply"
+                     value="#{login.userAccount.reply}">
+        </h:inputText>
+        </p>       
+        <h:commandButton id="reply" value="Reply" action="#{login.userAccount.processMsg()}"/>
+          &nbsp;&nbsp;                            
+        <h:commandButton id="ig" value="Ignore" action="welcome.xhtml" />
+        </div>
+       
+      
+                 
+                 
+        </h:form>    
+    </h:body>
+</html>
+

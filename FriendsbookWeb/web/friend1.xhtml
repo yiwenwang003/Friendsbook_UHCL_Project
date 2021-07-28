@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Friend Requests</title>
+    </h:head>
+    <style>
+body 
+{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #e6ecf0;
+}
+.op
+{
+    margin: auto;
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+}
+        
+    </style>
+   <h:body>
+       <div class="op">
+        <h:form>
+            <h3>What is your options?</h3>
+             <h:commandButton id="accept" value="Accept"  
+                              action="#{login.userAccount.processFriendRequest()}" />
+            
+               &nbsp;&nbsp;
+                <h:commandButton id="reject" value="Reject"  
+                                 action="notification.xhtml" />  
+               &nbsp;&nbsp;
+            
+                <h:commandButton id="return" value="Return"  
+                                 action="welcome.xhtml" />  
+               &nbsp;&nbsp;
+            
+            
+        </h:form>
+         <h:outputText value="#{login.userAccount.temp_accept}"/>
+       </div> 
+    </h:body>
+</html>
+

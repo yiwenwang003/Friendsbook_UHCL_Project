@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+       
+    </h:head>
+    <style>
+body
+{
+margin: 0;
+font-family: Arial, Helvetica, sans-serif;
+background: #e6ecf0;
+}
+.reg
+{
+margin: auto;
+position: fixed;
+top: 25%;
+left: 50%;
+/* bring your own prefixes */
+transform: translate(-50%, -50%);    
+}
+        
+        
+        
+    </style>
+    <h:body>
+        <div class="reg">
+        <h:form>
+            <h3>Create a new online access account!</h3>
+                 
+            <p>Please enter your ID:<br></br>
+                <h:inputText id="accoundid" required ="true" 
+                             requiredMessage="The accountid field cannot be empty"
+                        title="Please enter your accountid"
+                        value="#{register.accountId}"
+                        validatorMessage="Pleause use a correct format 
+                        for your accountid">
+                    <f:validateLength maximum="10" minimum="3" />
+                </h:inputText>
+            </p>
+           
+                 
+            <p>Please enter your Password:<br></br>
+                <h:inputText id="pwd" required ="true" 
+                             requiredMessage="The password field cannot be empty"
+                        title="Please enter your password Number"
+                        value="#{register.password}"
+                        validatorMessage="Pleause use a correct format 
+                        for your password">
+                  
+                </h:inputText>
+            </p>
+           
+            <p>Please enter your Gender:<br></br>
+                <h:inputText id="gender" required ="true" 
+                             requiredMessage="The gender cannot be empty"
+                        title="Please enter your gender"
+                        value="#{register.gender}">
+                        
+                </h:inputText>
+            </p>
+         
+                 
+            
+            <p>Please enter your school:<br></br>
+                <h:inputText id="school" required ="true" 
+                             requiredMessage="The school field cannot be empty"
+                        title="Please enter your school"
+                        value="#{register.school}">
+                       
+                </h:inputText>
+            </p>
+          
+            <p>Please enter your Birthday:<br></br>
+                <h:inputText id="birthday" required ="true" 
+                             requiredMessage="The birthday field cannot be empty"
+                        title="Please enter your birthday"
+                        value="#{register.birthday}">
+                        
+                </h:inputText>
+            </p>
+           
+
+             <p>
+                <h:commandButton id="submit" value="Submit"
+                                 action="confirmation1.xhtml" />
+            </p>
+
+        </h:form>
+        </div>
+    </h:body>
+</html>
+

@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Friends</title>
+    </h:head>
+    <style>
+body
+{
+margin: 0;
+font-family: Arial, Helvetica, sans-serif;
+background: #e6ecf0;
+}
+h2
+{
+
+    margin: auto;
+    position: fixed;
+    top: 5%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+}
+.ro
+{
+    margin: auto;
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+}
+        
+    </style>
+    <h:body>
+     
+    <h:form>
+        <h2>Below is your friends, select any friend to see his or her profiles</h2>
+            
+    <div class="ro">     
+        <h:selectOneMenu id="fri" 
+        style="width:150px" 
+        value="#{login.userAccount.selectedToView}">  
+        <f:selectItems value="#{login.userAccount.friends}" />  
+        </h:selectOneMenu>
+        &nbsp;&nbsp;
+        <h:commandButton id="go" value="Go" action ="friendDetail.xhtml" />
+
+        &nbsp;&nbsp;
+        <h:commandButton id="return" value="Return" action="welcome.xhtml" />
+    </div>           
+    </h:form>
+        
+        
+    </h:body>
+</html>
+

@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Friend Book Web Application</title>
+    </h:head>
+    <style>  
+html, body, section, div 
+{
+  height: 100vh;
+}
+body
+{
+  color: #fff;
+  font-family: sans-serif;
+  font-size: 1.25rem;
+  line-height: 150%;
+  text-shadow: 0 2px 2px #b6701e;
+}
+
+article {
+  position: relative;
+  top: 50%;
+  text-align: center;
+  transform: translate(0, -50%);
+  padding: 1rem;
+}
+
+h1
+{
+  font-size: 27px;
+  line-height: 32px;;
+}
+h2
+{
+    color: #14171a;
+    font-size: 18px;
+    line-height: 24px;
+    margin: 16px auto;
+}
+
+/* Pattern styles */
+.container {
+  display: grid;
+}
+
+
+.left-half {
+  background-color: #00ffff;
+  position: absolute;
+  left: 0px;
+  width: 50%;
+}
+
+
+.right-half {
+  background-color: #99ffff;
+  position: absolute;
+  right: 0px;
+  width: 50%;
+  
+}
+.title
+{
+margin: auto;
+width: 50%;
+text-align: center;
+padding: 10px;
+}
+        
+        
+    </style>  
+    <h:body>
+        <h:form>
+
+           
+<section class="container">
+  <div class="left-half">
+    <article>
+      <h1>Welcome to Friend Book</h1><img src="images/global.jpg" alt=""/>
+      
+      <p>need something</p>
+    </article>
+  </div>
+  <div class="right-half">
+    <article>
+      <h1 class="title">See what's happening in the world</h1>
+      <h2 class="subtitle">Join Friend Book today.</h2><br></br>
+      <p>
+        <h:link outcome="register.xhtml">
+            <h:graphicImage value="images/signup.jpg" alt="Sign up" style="height: 40px; width: 50px; margin-top: -15px"></h:graphicImage>
+            
+        </h:link> 
+        &nbsp;
+        <h:link outcome="login.xhtml">
+            <h:graphicImage value="images/login.png" alt="Login" style="height: 40px; width: 50px; margin-top: -15px"></h:graphicImage>
+        </h:link>
+      </p>         
+    </article>
+  </div>
+</section>
+
+        </h:form>
+    </h:body>
+</html>
+

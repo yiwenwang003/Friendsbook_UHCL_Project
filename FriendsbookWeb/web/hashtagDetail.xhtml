@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>Hashtag detail</title>
+    </h:head>
+    <style>
+body
+{
+margin: 0;
+font-family: Arial, Helvetica, sans-serif;
+background: #e6ecf0;
+}
+h3
+{
+margin: auto;
+width: 50%;
+text-align: center;
+padding: 10px;
+}
+
+.ha
+{
+position: fixed;
+top: 20%;
+left: 50%;
+/* bring your own prefixes */
+transform: translate(-50%, -50%); 
+}       
+    </style>
+    <h:body>
+        <h:form>
+        <h3> Hashtag from your friend</h3>
+        
+        <div class="ha">
+        <p>#{login.userAccount.seeHashtag()}</p> <br> </br>
+    
+         &nbsp;&nbsp;
+         <ui:repeat value="#{login.userAccount.list3}" var="com">
+         <h:outputText value="#{com}" /> <br/>
+         </ui:repeat>
+        <br></br>
+        <br></br>
+        
+        <h:commandButton id="return" value="Return"
+                         action="hashtags"/>
+       </div>
+        </h:form>
+
+    </h:body>
+</html>
+

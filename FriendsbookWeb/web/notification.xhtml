@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+   <h:head>
+        <title>Notification Page</title>
+    </h:head>
+    <style>
+        body
+        {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #e6ecf0;
+        }
+        h3
+        {
+            margin: auto;
+            position: fixed;
+            top: 5%;
+            left: 50%;
+            /* bring your own prefixes */
+            transform: translate(-50%, -50%);
+        }
+        .a
+        {
+          
+            position: fixed;
+            top: 30%;
+            left: 50%;
+            /* bring your own prefixes */
+            transform: translate(-50%, -50%);  
+        }
+        img 
+        {
+            float: left;
+        }
+    </style>
+    <h:body>
+       
+        <h:form>
+            <h3> Please select what you want to view in Notification:<br></br></h3>
+            <div class="a">
+            <h:selectOneRadio value="#{login.userAccount.sneha}" layout="pageDirection" >
+                <img src="images/notifi.png" alt="" style="width:150px;height:150px;margin-right:50px"/>
+                <f:selectItems value = "#{login.userAccount.showNotification()}"   var="value" itemLabel="#{value}" itemValue="#{value}"/><br></br>
+
+            </h:selectOneRadio>
+            
+            &nbsp;&nbsp;
+<br></br>
+            <h:commandButton id="gogo" value="Go"  action="#{login.userAccount.sneha1()}"></h:commandButton>
+
+            &nbsp;&nbsp;
+            
+            <h:commandButton id="return" value="Return"
+                             action="welcome.xhtml"></h:commandButton>
+
+            </div>
+        
+         </h:form>
+    </h:body>
+</html>
+

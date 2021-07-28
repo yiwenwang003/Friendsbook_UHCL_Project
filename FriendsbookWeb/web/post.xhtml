@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Post </title>
+    </h:head>
+    <style>
+    body 
+    {
+        margin: auto;
+        font-family: Arial, Helvetica, sans-serif;
+        background: #e6ecf0;
+    }
+    .b
+    {
+        margin: auto;
+        position: fixed;
+        top: 20%;
+        left: 50%;
+        /* bring your own prefixes */
+        transform: translate(-50%, -50%);
+        
+    }
+    img 
+    {
+        float: left;
+    }
+        
+
+ 
+    </style>
+    <h:body>
+      <div class="b">
+       <h:form>
+        <h2>What is on your mind?</h2><br></br>
+            <h:inputText id="post" required ="false" 
+            requiredMessage="The post field cannot be empty"
+            title="Please enter your post"
+            value="#{login.userAccount.postContent}" />
+            <img src="images/post.jpg" alt="" style="width:150px;height:150px;margin-right:50px"/>
+            <br></br>
+            <br></br>
+            <h:commandButton id="submit" value="Submit"
+            action="#{login.userAccount.createPost()}" />
+ &nbsp;&nbsp;
+            <h:commandButton id="return" value="Return"
+            action="welcome" />
+      
+          
+        </h:form>
+            <h:outputText value="#{login.userAccount.tempvalue}"/>
+             
+      </div>
+    </h:body>
+</html>
+

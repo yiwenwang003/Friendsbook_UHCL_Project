@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>Post </title>
+    </h:head>
+    <style>
+body {
+margin: 0;
+font-family: Arial, Helvetica, sans-serif;
+background: #e6ecf0;
+}
+.po{
+     margin: auto;
+        position: fixed;
+        top: 20%;
+        left: 50%;
+        /* bring your own prefixes */
+        transform: translate(-50%, -50%);
+}
+        
+    </style>
+    <h:body>
+        <div class="po">
+        <h:form>
+            
+            <h2>Hello your friend's post, #{login.userAccount.selectedToView}</h2>
+            
+            <h4>#{login.userAccount.test1()}</h4>
+      
+            <br></br>
+            
+         <ui:repeat value="#{login.userAccount.showComment()}" var="com">
+         <h:outputText value="#{com}" /> <br/>
+         </ui:repeat>
+            
+        <p>
+
+        </p>
+        &nbsp;&nbsp;
+            <h:commandButton id="comment" value="Comment" immediate="true"
+                                     action="updateComment.xhtml" />
+            
+        &nbsp;&nbsp;
+            <h:commandButton id="return" value="Return" immediate="true"
+                               action="welcome.xhtml" />
+            
+        </h:form>
+        </div>
+    </h:body>
+</html>
+

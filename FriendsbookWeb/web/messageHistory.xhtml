@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>All the Msg</title>
+    </h:head>
+    <style>
+body
+{
+margin: 0;
+font-family: Arial, Helvetica, sans-serif;
+background: #e6ecf0;
+}
+h3
+{
+margin: auto;
+width: 50%;
+text-align: center;
+padding: 10px;
+}
+.mm
+{
+margin: auto;
+width: 50%;
+text-align: center;
+padding: 10px;
+}
+        
+    </style>
+    <h:body>
+        <h3>All the message history</h3>
+        <div class="mm">
+        <h:form>
+         
+            <h4>Please enter your Message</h4><br></br>
+            <h4>Please enter your Message</h4><br></br>
+
+                      <p>#{login.userAccount.sendMsg()}</p>
+                        <br></br>
+            <ui:repeat value="#{login.userAccount.list_history}" var="com">
+
+                <h:outputText value="#{com}" /><br></br>
+
+            </ui:repeat>
+                        <br></br>
+
+           
+            <br></br>
+         
+            <h:inputText id="msg" required ="false"  title="Please enter your msg" value="#{login.userAccount.contentFormsg}"/>
+                 &nbsp;&nbsp;  
+            <h:commandButton id="ss" value="Send it"
+                     action="#{login.userAccount.updateMsg()}" />
+
+
+            &nbsp;&nbsp;  
+            <h:commandButton id="return" value="Return" immediate="true"
+                                 action="welcome.xhtml" />
+            </h:form>
+            <h:outputText value="#{login.userAccount.tempvalue_Msg}"/>
+        </div>
+        
+        
+    </h:body>
+</html>
+

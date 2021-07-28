@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Update Profiles</title>
+    </h:head>
+    <style>
+    body
+    {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: #e6ecf0;
+    }
+    .up
+    {
+        margin: auto;
+        width: 50%;
+        text-align: center;
+        padding: 10px;
+
+    }
+    
+        
+    </style>
+    <h:body>
+       <div class="up"> 
+        <h3> #{login.userAccount.userID}, What do you want to update?</h3> 
+        <h:form>
+            <p> Gender:
+                <h:inputText id="g" required ="false"       
+                            title="Please enter your gender"
+                            value="#{login.userAccount.userGender}"/>
+                
+            </p>    
+            <p> School:
+                <h:inputText id="sh" required ="false"       
+                            title="Please enter your school"
+                            value="#{login.userAccount.userSchool}"/>
+          
+            </p>    
+            <p> Birthday:
+                <h:inputText id="b" required ="false"       
+                            title="Please enter your birthday"
+                            value="#{login.userAccount.userBirthday}"/>
+                
+            </p>    
+            <br></br>
+            <br></br>
+             <h:commandButton id="submit" value="Update it"
+                              action="#{login.userAccount.updateProfile()}" />
+            
+             &nbsp;&nbsp;          
+            <h:commandButton id="return" value="Return"
+                                 action="welcome.xhtml" />
+            
+            
+        </h:form>
+          <h:outputText value="#{login.userAccount.temp_change}"/>
+       </div>
+    </h:body>
+</html>
+

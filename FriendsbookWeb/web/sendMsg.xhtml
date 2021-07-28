@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>Send Message</title>
+    </h:head>
+    <style>
+    body
+    {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: #e6ecf0;
+    }
+    .ms
+    {
+        margin: auto;
+        width: 50%;
+        text-align: center;
+        padding: 10px;
+    }
+    .ab
+    {
+        margin: auto;
+        width: 50%;
+        text-align: center;
+        padding: 10px;
+        
+    }
+    img 
+    {
+        float: left;
+    }
+        
+    </style>
+        
+        
+    <h:body>
+        <div class="ms">
+        <h3>Send the message</h3>
+        <h:form>  
+            <img src="images/message.png" alt=""  style="width:175px;height:175px;margin-right:20px"/>
+            <p>Who do you want to send the message?</p><br></br>
+                <h:inputText id="who" required ="true"                          
+                        title="Please enter who you want to send"
+                        value="#{login.userAccount.nameFormsg}" />
+                
+           
+            <h:commandButton id="go" value="Go"
+                                 action="messageHistory.xhtml" />
+            &nbsp;&nbsp;                
+            
+        </h:form> 
+        </div>
+        <div class="ab">
+        <h:form>
+            <h:commandButton id="return" value="Return"  
+                                 action="welcome.xhtml" />    
+        </h:form>
+        </div> 
+       
+          
+    </h:body>
+</html>
+
