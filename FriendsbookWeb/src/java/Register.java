@@ -59,7 +59,7 @@ public class Register {
                // System.out.println("Account creation failed because id is used");
                 return ("Account creation failed because id is used");
             }
-            else//below from snha code
+            else
             {
                 int l = accountId.length();
                 if(l>=3 && l <=10)
