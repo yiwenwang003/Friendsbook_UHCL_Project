@@ -57,7 +57,7 @@ public class Login  implements Serializable{
         try
         {      
             //connect to the database with user name and password
-            connection = DriverManager.getConnection(DATABASE_URL,"wangy8693","1616764");
+            connection = DriverManager.getConnection(DATABASE_URL,"xxxxxx","xxxxxx");
             statement = connection.createStatement();
             
             resultSet = statement.executeQuery("Select * from useraccount_table "
