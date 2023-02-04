@@ -49,7 +49,7 @@ public class Register {
         ResultSet rs=null;
         try
         {          
-            conn = DriverManager.getConnection(DB_URL,"wangy8693","1616764");
+            conn = DriverManager.getConnection(DB_URL,"xxxxxx","xxxxxx");
             stat= conn.createStatement();
             rs= stat.executeQuery("Select * from useraccount_table where userID ='"+ accountId +"'");
 // how to know it contian id or pwd
