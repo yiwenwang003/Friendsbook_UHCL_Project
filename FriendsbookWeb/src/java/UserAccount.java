@@ -141,7 +141,7 @@ public class UserAccount implements Serializable {
         {
             updateID.clear();
             final String DB_URL="jdbc:mysql://mis-sql.uhcl.edu/wangy8693";
-            conn =DriverManager.getConnection(DB_URL,"wangy8693","1616764");
+            conn =DriverManager.getConnection(DB_URL,"xxxxxx","xxxxxx");
             stat=conn.createStatement();
             rs=stat.executeQuery("select * from friend_table where id1= '"+userID+"' or id2 = '" + userID + "'");
             //how do we kown it contian id already
@@ -284,7 +284,7 @@ public class UserAccount implements Serializable {
         try
         {
             final String DB_URL="jdbc:mysql://mis-sql.uhcl.edu/wangy8693";
-            conn= DriverManager.getConnection(DB_URL,"wangy8693","1616764");
+            conn= DriverManager.getConnection(DB_URL,"xxxxxx","xxxxxx");
             stat = conn.createStatement();
             rs = stat.executeQuery("Select * from comment_table where PostID = '"
                         + intSelection+ "'");
@@ -347,7 +347,7 @@ public class UserAccount implements Serializable {
         try
         {
             final String DB_URL="jdbc:mysql://mis-sql.uhcl.edu/wangy8693";
-            conn= DriverManager.getConnection(DB_URL,"wangy8693","1616764");
+            conn= DriverManager.getConnection(DB_URL,"xxxxxx","xxxxxx");
             stat = conn.createStatement();
             rs = stat.executeQuery("Select * from profile_table where userID = '"+ abc+ "'");
             if(rs.next())
@@ -410,7 +410,7 @@ public class UserAccount implements Serializable {
         try
         {
             final String DB_URL="jdbc:mysql://mis-sql.uhcl.edu/wangy8693";
-            conn= DriverManager.getConnection(DB_URL,"wangy8693","1616764");
+            conn= DriverManager.getConnection(DB_URL,"xxxxxx","xxxxxx");
             stat= conn.createStatement();
           //  rs= stat.executeQuery("select * from notification_msgtable");
           String r = "ur";
@@ -538,7 +538,7 @@ public class UserAccount implements Serializable {
         try
         {
             final String DB_URL="jdbc:mysql://mis-sql.uhcl.edu/wangy8693";
-            conn=DriverManager.getConnection(DB_URL,"wangy8693","1616764");
+            conn=DriverManager.getConnection(DB_URL,"xxxxxx","xxxxxx");
             stat=conn.createStatement();
             rs=stat.executeQuery("select * from post_table");
            
@@ -634,7 +634,7 @@ public class UserAccount implements Serializable {
         try
         {         
             final String DB_URL="jdbc:mysql://mis-sql.uhcl.edu/wangy8693";
-            conn=DriverManager.getConnection(DB_URL,"wangy8693","1616764");
+            conn=DriverManager.getConnection(DB_URL,"xxxxxx","xxxxxx");
             stat=conn.createStatement();
 
             rs =stat.executeQuery("select * from useraccount_table ");
@@ -694,7 +694,7 @@ public class UserAccount implements Serializable {
         try
         {
             final String DB_URL="jdbc:mysql://mis-sql.uhcl.edu/wangy8693";
-            conn=DriverManager.getConnection(DB_URL,"wangy8693","1616764");
+            conn=DriverManager.getConnection(DB_URL,"xxxxxx","xxxxxx");
             stat=conn.createStatement();
 
             if(intSelection >= 1 && intSelection <= friends_list.size())
@@ -765,7 +765,7 @@ public class UserAccount implements Serializable {
         rankHash.clear();
         try
         {
-            conn = DriverManager.getConnection(DB_URL, "wangy8693","1616764");
+            conn = DriverManager.getConnection(DB_URL, "xxxxxx","xxxxxx");
             stat= conn.createStatement();
             rs= stat.executeQuery("select * from hashtag_table");
             while(rs.next())
@@ -851,7 +851,7 @@ public class UserAccount implements Serializable {
         intSelection= Integer.parseInt(""+selecedHashtag.charAt(0)); 
         try
         {
-            conn = DriverManager.getConnection(DB_URL, "wangy8693","1616764");
+            conn = DriverManager.getConnection(DB_URL, "xxxxxx","xxxxxx");
             Statement statPost=conn.createStatement();
             ResultSet rsPost=statPost.executeQuery("select * from post_table");
             boolean hasTag=false;
@@ -949,7 +949,7 @@ public class UserAccount implements Serializable {
         ResultSet rs=null;
         try
         {
-            conn = DriverManager.getConnection(DB_URL, "wangy8693","1616764");
+            conn = DriverManager.getConnection(DB_URL, "xxxxxx","xxxxxx");
             stat= conn.createStatement();
             char[] abc = sneha.toCharArray();
             String d = "";
@@ -1019,7 +1019,7 @@ public class UserAccount implements Serializable {
         try
         {
             final String DB_URL="jdbc:mysql://mis-sql.uhcl.edu/wangy8693";
-            conn= DriverManager.getConnection(DB_URL,"wangy8693","1616764");
+            conn= DriverManager.getConnection(DB_URL,"xxxxxx","xxxxxx");
             stat= conn.createStatement();
             rs= stat.executeQuery("select * from friend_table");
             
@@ -1087,7 +1087,7 @@ public class UserAccount implements Serializable {
         try
         {
             final String DB_URL="jdbc:mysql://mis-sql.uhcl.edu/wangy8693";
-            conn= DriverManager.getConnection(DB_URL,"wangy8693","1616764");
+            conn= DriverManager.getConnection(DB_URL,"xxxxxx","xxxxxx");
             stat= conn.createStatement();
             
             int rs_reply=stat.executeUpdate("UPDATE notification_msgtable set status = 'r' where sender = '"+
@@ -1135,7 +1135,7 @@ public class UserAccount implements Serializable {
         {
             temp_change="";
             final String DB_URL="jdbc:mysql://mis-sql.uhcl.edu/wangy8693";
-            conn= DriverManager.getConnection(DB_URL,"wangy8693","1616764");
+            conn= DriverManager.getConnection(DB_URL,"xxxxxx","xxxxxx");
             stat= conn.createStatement();
             rs= stat.executeQuery("select * from useraccount_table");
             
@@ -1258,7 +1258,7 @@ public class UserAccount implements Serializable {
         {
             list_history.clear();
             msg_history.clear();
-            conn= DriverManager.getConnection(DB_URL,"wangy8693","1616764");
+            conn= DriverManager.getConnection(DB_URL,"xxxxxx","xxxxxx");
             stat= conn.createStatement();
             rs= stat.executeQuery("select * from notification_msgtable");
              
@@ -1334,7 +1334,7 @@ public class UserAccount implements Serializable {
         try
         {
             final String DB_URL="jdbc:mysql://mis-sql.uhcl.edu/wangy8693";
-            conn= DriverManager.getConnection(DB_URL,"wangy8693","1616764");
+            conn= DriverManager.getConnection(DB_URL,"xxxxxx","xxxxxx");
             stat= conn.createStatement();
             rs= stat.executeQuery("select * from notification_msgtable");
 
@@ -1383,7 +1383,7 @@ public class UserAccount implements Serializable {
         try
         {
             temp_requestInfo="";
-            conn= DriverManager.getConnection(DB_URL,"wangy8693","1616764");
+            conn= DriverManager.getConnection(DB_URL,"xxxxxx","xxxxxx");
             stat= conn.createStatement();
             rs= stat.executeQuery("select * from notification_reqtable ");
         
