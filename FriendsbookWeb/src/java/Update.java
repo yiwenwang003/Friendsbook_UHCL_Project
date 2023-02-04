@@ -55,7 +55,7 @@ public class Update {
         
         try
         {
-            conn= DriverManager.getConnection(DB_URL,"wangy8693","1616764");
+            conn= DriverManager.getConnection(DB_URL,"xxxxxx","xxxxxx");
             stat= conn.createStatement();
             rs= stat.executeQuery("select * from post_table where PostID ='"+ postID+"'");
             if(rs.next())
@@ -112,7 +112,7 @@ public class Update {
         try
         {
             final String DB_URL="jdbc:mysql://mis-sql.uhcl.edu/wangy8693";
-            conn= DriverManager.getConnection(DB_URL,"wangy8693","1616764");
+            conn= DriverManager.getConnection(DB_URL,"xxxxxx","xxxxxx");
             stat = conn.createStatement();
             
             ResultSet rsPost = stat.executeQuery("Select * from post_table where PostID = '"+postID+"'");
