@@ -55,7 +55,7 @@ public class Notifications_msg {
         try
         {
             
-            conn= DriverManager.getConnection(DB_URL,"wangy8693","1616764");
+            conn= DriverManager.getConnection(DB_URL,"xxxxxx","xxxxxx");
             stat= conn.createStatement();
             rs= stat.executeQuery("select * from notification_msgtable where sender ='"+ a+"'");
             if(rs.next())
